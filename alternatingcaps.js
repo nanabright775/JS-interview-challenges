@@ -6,6 +6,8 @@ Example input: "I'm so happy it's Monday"
 Example output: "I'M So hApPy iT'S MoNdAy"
 */
 
+
+
 function altCaps(str){
     const newStr = [... str].map(
         l => {
@@ -14,9 +16,15 @@ function altCaps(str){
             //together
             return Math.random() < 0.5 ? l.toUpperCase() : l.toLowerCase()
         }
+     //or you can use this rather if you want to use even index to track and capitalize them
+     // (l, index) => {
+      //   return index % 2 === 0 ? ? l.toUpperCase() : l.toLowerCase()
+     // }
+     
     )
     console.log(Math.random() < 0.5)
     return newStr.join('');
 }
+
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));
